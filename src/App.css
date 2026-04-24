@@ -1,0 +1,38 @@
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-shell {
+  width: min(1280px, calc(100% - 96px));
+  margin: 0 auto;
+}
+
+@media (max-width: 640px) {
+  .page-shell {
+    width: min(1280px, calc(100% - 32px));
+  }
+}
+
+.page-card {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(112, 137, 160, 0.18);
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 24px 60px rgba(32, 52, 71, 0.12);
+}
+
+.page-heading {
+  margin: 0 0 12px;
+  color: #17324d;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
+}
+
+.page-copy {
+  margin: 0;
+  color: #4d6478;
+  font-size: 1rem;
+  line-height: 1.7;
+}
