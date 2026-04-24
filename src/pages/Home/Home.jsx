@@ -105,11 +105,9 @@ function Home() {
         <div className="page-shell home__inner">
           <div className="home__copy">
             <h1 className="home__title">
-              Plan Today for a
-              <br />
-              Prosperous
-              <br />
-              Tomorrow
+              <span className="home__title-line">Plan Today for a</span>
+              <span className="home__title-line">Prosperous</span>
+              <span className="home__title-line">Tomorrow</span>
             </h1>
 
             <p className="home__description">

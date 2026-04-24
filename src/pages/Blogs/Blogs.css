@@ -1,7 +1,8 @@
 .blogs-hero {
   position: relative;
   overflow: hidden;
-  min-height: 620px;
+  width: 100%;
+  min-height: 646px;
   background-color: #05162f;
   background-position: center;
   background-repeat: no-repeat;
@@ -26,9 +27,9 @@
   grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.8fr);
   gap: 36px;
   align-items: center;
-  min-height: 620px;
-  padding-top: 56px;
-  padding-bottom: 56px;
+  min-height: 646px;
+  padding-top: 28px;
+  padding-bottom: 28px;
 }
 
 .blogs-hero__content {
@@ -210,8 +211,8 @@
     grid-template-columns: 1fr;
     gap: 28px;
     min-height: auto;
-    padding-top: 64px;
-    padding-bottom: 72px;
+    padding-top: 72px;
+    padding-bottom: 84px;
   }
 
   .blogs-hero__visual {
@@ -230,6 +231,11 @@
 }
 
 @media (max-width: 640px) {
+  .blogs-hero__inner {
+    padding-top: 56px;
+    padding-bottom: 64px;
+  }
+
   .blogs-hero__title {
     font-size: clamp(2.5rem, 12vw, 3.4rem);
   }

@@ -1,7 +1,8 @@
 .about-hero {
   position: relative;
   overflow: hidden;
-  min-height: 700px;
+  width: 100%;
+  min-height: 646px;
   background:
     linear-gradient(90deg, rgba(4, 16, 35, 0.96) 0%, rgba(5, 20, 43, 0.86) 46%, rgba(7, 24, 48, 0.42) 74%, rgba(7, 24, 48, 0.18) 100%),
     radial-gradient(circle at 76% 18%, rgba(90, 189, 255, 0.22), transparent 24%),
@@ -33,7 +34,7 @@
   z-index: 1;
   display: flex;
   align-items: center;
-  min-height: 700px;
+  min-height: 646px;
 }
 
 .about-hero__content {
@@ -319,16 +320,18 @@
 
 @media (max-width: 900px) {
   .about-hero {
-    min-height: 620px;
+    min-height: auto;
   }
 
   .about-hero__shell {
-    min-height: 620px;
+    min-height: auto;
+    padding-top: 72px;
+    padding-bottom: 84px;
   }
 
   .about-hero__content {
     max-width: 100%;
-    padding: 56px 0;
+    padding: 0;
   }
 
   .about-hero::after {
@@ -392,12 +395,10 @@
 }
 
 @media (max-width: 640px) {
-  .about-hero {
-    min-height: 560px;
-  }
-
   .about-hero__shell {
-    min-height: 560px;
+    min-height: auto;
+    padding-top: 56px;
+    padding-bottom: 64px;
   }
 
   .about-hero__eyebrow {
