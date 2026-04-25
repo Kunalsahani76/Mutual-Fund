@@ -154,7 +154,9 @@
   justify-content: center;
   min-height: 274px;
   padding: 34px 28px 28px;
+  background: #ffffff;
   text-align: center;
+  transition: background 0.28s ease;
 }
 
 .about-values__title {
@@ -175,21 +177,28 @@
 }
 
 .about-values__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 82px;
+  height: 82px;
   color: #050505;
 }
 
-.about-values__icon svg {
-  width: 72px;
-  height: 72px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 4;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+.about-values__icon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .about-values__card > * + * {
   border-left: 1.5px solid rgba(37, 44, 55, 0.52);
+}
+
+.about-values__content:hover,
+.about-values__content:focus-within {
+  background: linear-gradient(90deg, #acd4f3 0%, #d9ecfa 58%, #ffffff 100%);
 }
 
 .about-advantage {
@@ -220,6 +229,12 @@
   min-height: 248px;
   border: 1.5px solid #bddcff;
   background: #ffffff;
+  box-shadow: 0 0 0 rgba(53, 95, 134, 0);
+  transform: translateY(0) scale(1);
+  transition:
+    border-color 0.28s ease,
+    box-shadow 0.28s ease,
+    transform 0.28s ease;
 }
 
 .about-advantage__image {
@@ -227,6 +242,8 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transform: scale(1);
+  transition: transform 0.42s ease;
 }
 
 .about-advantage__overlay {
@@ -243,6 +260,32 @@
     #fbfcfd 100%
   );
   backdrop-filter: blur(5px);
+  transition: background 0.28s ease, backdrop-filter 0.28s ease;
+}
+
+.about-advantage__card:hover,
+.about-advantage__card:focus-within {
+  z-index: 1;
+  border-color: rgba(84, 164, 226, 0.88);
+  box-shadow: 0 24px 52px rgba(53, 95, 134, 0.22);
+  transform: translateY(-8px) scale(1.035);
+}
+
+.about-advantage__card:hover .about-advantage__image,
+.about-advantage__card:focus-within .about-advantage__image {
+  transform: scale(1.12);
+}
+
+.about-advantage__card:hover .about-advantage__overlay,
+.about-advantage__card:focus-within .about-advantage__overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(251, 252, 253, 0.08) 0%,
+    rgba(251, 252, 253, 0.72) 30%,
+    rgba(251, 252, 253, 0.96) 58%,
+    #fbfcfd 100%
+  );
+  backdrop-filter: blur(7px);
 }
 
 .about-advantage__card-title {
@@ -473,10 +516,9 @@
     padding: 28px 18px 24px;
   }
 
-  .about-values__icon svg {
-    width: 58px;
-    height: 58px;
-    stroke-width: 3.4;
+  .about-values__icon {
+    width: 64px;
+    height: 64px;
   }
 
   .about-advantage {
@@ -494,6 +536,11 @@
 
   .about-advantage__card {
     min-height: 220px;
+  }
+
+  .about-advantage__card:hover,
+  .about-advantage__card:focus-within {
+    transform: translateY(-4px) scale(1.01);
   }
 
   .about-advantage__overlay {
@@ -535,5 +582,13 @@
     min-height: 54px;
     margin-top: 22px;
     font-size: 0.92rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .about-values__content,
+  .about-cta__panel {
+    padding-right: 14px;
+    padding-left: 14px;
   }
 }

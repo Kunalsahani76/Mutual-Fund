@@ -1,5 +1,9 @@
 import { useState } from 'react'
 import Button from '../../components/Button/Button'
+import hniIcon from '../../assets/icons/HNI Services.png'
+import insuranceIcon from '../../assets/icons/Insurance.png'
+import mutualFundIcon from '../../assets/icons/Mutual Fund.png'
+import nriIcon from '../../assets/icons/NRI Services.png'
 import hniImage from '../../assets/images/hni.png'
 import insuranceImage from '../../assets/images/insurance.png'
 import kidsEducationImage from '../../assets/images/kidseducation.png'
@@ -18,25 +22,25 @@ const services = [
     title: 'Mutual Fund',
     description: 'Diversified portfolios managed by industry experts.',
     image: mutualFundImage,
-    icon: 'wallet',
+    icon: mutualFundIcon,
   },
   {
     title: 'Insurance',
     description: 'Comprehensive protection for what matters most.',
     image: insuranceImage,
-    icon: 'shield',
+    icon: insuranceIcon,
   },
   {
     title: 'NRI',
     description: 'Global wealth solutions for non-residents.',
     image: nriImage,
-    icon: 'globe',
+    icon: nriIcon,
   },
   {
     title: 'HNI',
     description: 'Exclusive strategies for ultra-high net worth.',
     image: hniImage,
-    icon: 'badge',
+    icon: hniIcon,
   },
 ]
 
@@ -274,44 +278,6 @@ function calculateGoalProjection(inputs) {
   }
 }
 
-function ServiceCardIcon({ type }) {
-  if (type === 'shield') {
-    return (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M12 3.5 5.5 6.2v4.9c0 4.2 2.6 7.9 6.5 9.4 3.9-1.5 6.5-5.2 6.5-9.4V6.2L12 3.5Z" />
-      </svg>
-    )
-  }
-
-  if (type === 'globe') {
-    return (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <circle cx="12" cy="12" r="8.2" />
-        <path d="M3.8 12h16.4" />
-        <path d="M12 3.8c2.1 2.2 3.2 4.9 3.2 8.2S14.1 18 12 20.2c-2.1-2.2-3.2-4.9-3.2-8.2S9.9 6 12 3.8Z" />
-      </svg>
-    )
-  }
-
-  if (type === 'badge') {
-    return (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <circle cx="12" cy="8.5" r="4.7" />
-        <path d="m8.7 12.2-1 7 4.3-2.5 4.3 2.5-1-7" />
-        <path d="m10.1 8.5 1.2 1.2 2.6-2.7" />
-      </svg>
-    )
-  }
-
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <rect x="4" y="5.5" width="16" height="13" rx="1.7" />
-      <path d="M20 9.5h-6.5a2.8 2.8 0 0 0 0 5.6H20" />
-      <circle cx="13.5" cy="12.3" r="0.8" />
-    </svg>
-  )
-}
-
 function PlanningCardIcon({ type }) {
   if (type === 'growth') {
     return (
@@ -459,7 +425,7 @@ function Services() {
                 alt={`${service.title} service illustration`}
               />
               <div className="service-card__icon">
-                <ServiceCardIcon type={service.icon} />
+                <img src={service.icon} alt="" aria-hidden="true" />
               </div>
               <h2 className="service-card__title">{service.title}</h2>
               <p className="service-card__description">{service.description}</p>

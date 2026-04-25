@@ -374,6 +374,14 @@
     padding-bottom: 64px;
   }
 
+  .contact-hero {
+    margin-bottom: 56px;
+  }
+
+  .contact-hero__shell {
+    padding: 56px 0 64px;
+  }
+
   .contact-connect__form-card {
     padding: 26px 20px 22px;
   }
@@ -416,8 +424,29 @@
   }
 
   .contact-cta__button {
-    min-width: 170px;
+    width: 100%;
+    min-width: 0;
     min-height: 52px;
     margin-top: 22px;
+  }
+}
+
+@media (max-width: 380px) {
+  .contact-connect__form-card,
+  .contact-info,
+  .contact-expertise,
+  .contact-cta__panel {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .contact-info__item {
+    grid-template-columns: 34px minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .contact-info__icon {
+    width: 34px;
+    height: 34px;
   }
 }

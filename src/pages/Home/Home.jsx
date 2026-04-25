@@ -1,5 +1,11 @@
 import homeHero from '../../assets/images/homehero.png'
-import advisorImage from '../../assets/images/hero.png'
+import advisorImage from '../../assets/images/Private Wealth Management.jpg'
+import mutualFundIcon from '../../assets/icons/Mutual Fund.png'
+import insuranceIcon from '../../assets/icons/Insurance.png'
+import nriServicesIcon from '../../assets/icons/NRI Services.png'
+import hniServicesIcon from '../../assets/icons/HNI Services.png'
+import trustedAdvisorsIcon from '../../assets/icons/Trusted Advisors.png'
+import expertFinancialPlanningIcon from '../../assets/icons/Expert Financial Planning.png'
 import Button from '../../components/Button/Button'
 import './Home.css'
 
@@ -8,90 +14,27 @@ const serviceItems = [
     title: 'Mutual Fund',
     description:
       'Diversified equity and debt portfolios tailored to your risk appetite and financial horizons.',
-    icon: 'fund',
+    icon: mutualFundIcon,
   },
   {
     title: 'Insurance',
     description:
       'Comprehensive risk management solutions providing security for your family and assets.',
-    icon: 'shield',
+    icon: insuranceIcon,
   },
   {
     title: 'NRI Services',
     description:
       "Specialized advisory for non-residents looking to capitalize on India's growth story.",
-    icon: 'globe',
+    icon: nriServicesIcon,
   },
   {
     title: 'HNI Services',
     description:
       'Bespoke portfolio management and estate planning for high net-worth individuals.',
-    icon: 'diamond',
+    icon: hniServicesIcon,
   },
 ]
-
-function ServiceIcon({ type }) {
-  if (type === 'shield') {
-    return (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M12 3 5 6v5c0 4.5 2.9 8.5 7 9.8 4.1-1.3 7-5.3 7-9.8V6l-7-3Z" />
-        <path d="m9.5 12 1.7 1.7 3.3-3.7" />
-      </svg>
-    )
-  }
-
-  if (type === 'globe') {
-    return (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M12 4a8 8 0 1 0 0 16 8 8 0 0 0 0-16Z" />
-        <path d="M4.5 12h15" />
-        <path d="M12 4c2.2 2.3 3.4 5 3.4 8S14.2 17.7 12 20c-2.2-2.3-3.4-5-3.4-8S9.8 6.3 12 4Z" />
-      </svg>
-    )
-  }
-
-  if (type === 'diamond') {
-    return (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M6 7.5 9 4h6l3 3.5-6 12-6-12Z" />
-        <path d="M9 4 12 7.5 15 4" />
-        <path d="M6 7.5h12" />
-      </svg>
-    )
-  }
-
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <rect x="5" y="5" width="14" height="14" rx="1.8" />
-      <path d="M9 9h6v6H9z" />
-      <path d="M15 12h3" />
-    </svg>
-  )
-}
-
-function PartnerIcon({ type }) {
-  if (type === 'trust') {
-    return (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="m6 7 4.5 4.5L8 14" />
-        <path d="M11 4.5 19.5 13" />
-        <path d="m4.5 11 8.5 8.5" />
-        <path d="M12.5 8.5 16 5" />
-      </svg>
-    )
-  }
-
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M5 16.5 9.2 12l3 3 6.3-7" />
-      <path d="M5 7.5v3.8h3.8" />
-      <path d="M15.5 6h3v3" />
-      <circle cx="9.2" cy="12" r="1" fill="currentColor" stroke="none" />
-      <circle cx="12.2" cy="15" r="1" fill="currentColor" stroke="none" />
-      <circle cx="18.5" cy="8" r="1" fill="currentColor" stroke="none" />
-    </svg>
-  )
-}
 
 function Home() {
   return (
@@ -136,7 +79,7 @@ function Home() {
             {serviceItems.map((item) => (
               <article key={item.title} className="wealth-card">
                 <div className="wealth-card__icon">
-                  <ServiceIcon type={item.icon} />
+                  <img src={item.icon} alt="" aria-hidden="true" />
                 </div>
                 <h3 className="wealth-card__title">{item.title}</h3>
                 <p className="wealth-card__text">{item.description}</p>
@@ -164,7 +107,7 @@ function Home() {
             <div className="partner-section__points">
               <div className="partner-point">
                 <div className="partner-point__icon">
-                  <PartnerIcon type="trust" />
+                  <img src={trustedAdvisorsIcon} alt="" aria-hidden="true" />
                 </div>
                 <div>
                   <h3 className="partner-point__title">Trusted Advisors</h3>
@@ -176,7 +119,7 @@ function Home() {
 
               <div className="partner-point">
                 <div className="partner-point__icon">
-                  <PartnerIcon type="planning" />
+                  <img src={expertFinancialPlanningIcon} alt="" aria-hidden="true" />
                 </div>
                 <div>
                   <h3 className="partner-point__title">Expert Financial Planning</h3>

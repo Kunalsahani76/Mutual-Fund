@@ -2,6 +2,8 @@ import Button from '../../components/Button/Button'
 import aboutHero from '../../assets/images/abouthero.png'
 import ourMission from '../../assets/images/ourmission.png'
 import ourVision from '../../assets/images/ourvision.png'
+import ourMissionIcon from '../../assets/icons/OUR MISSION.png'
+import ourVisionIcon from '../../assets/icons/OUR VISION.png'
 import trustedAdvisor from '../../assets/images/trustedadvisor.png'
 import expertPlanning from '../../assets/images/expertplanning.png'
 import growthFocus from '../../assets/images/growthfocus.png'
@@ -47,7 +49,7 @@ function About() {
 
         <div className="page-shell about-hero__shell">
           <div className="about-hero__content">
-            <p className="about-hero__eyebrow">About PrimeVista</p>
+            <p className="about-hero__eyebrow"></p>
             <h1 className="about-hero__title">
               About PrimeVista
               <br />
@@ -85,12 +87,7 @@ function About() {
           <article className="about-values__card">
             <div className="about-values__content">
               <div className="about-values__icon" aria-hidden="true">
-                <svg viewBox="0 0 64 64">
-                  <path d="M22 42c-1.4 4.2-5.5 6.7-10 6 0-4.5 2.7-8.6 7-10" />
-                  <path d="m26 38-10-10c6-12.8 17.6-18.8 30-16-1.8 12.4-7.8 24-20 30Z" />
-                  <path d="m35 29 11-11" />
-                  <circle cx="41.5" cy="22.5" r="3.5" />
-                </svg>
+                <img src={ourMissionIcon} alt="" />
               </div>
               <h2 className="about-values__title">OUR MISSION</h2>
               <p className="about-values__text">
@@ -110,10 +107,7 @@ function About() {
             </div>
             <div className="about-values__content">
               <div className="about-values__icon" aria-hidden="true">
-                <svg viewBox="0 0 64 64">
-                  <path d="M8 32s9-14 24-14 24 14 24 14-9 14-24 14S8 32 8 32Z" />
-                  <circle cx="32" cy="32" r="8" />
-                </svg>
+                <img src={ourVisionIcon} alt="" />
               </div>
               <h2 className="about-values__title">OUR VISION</h2>
               <p className="about-values__text">

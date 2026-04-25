@@ -9,6 +9,12 @@
   margin: 0 auto;
 }
 
+@media (max-width: 1024px) {
+  .page-shell {
+    width: min(1280px, calc(100% - 56px));
+  }
+}
+
 @media (max-width: 640px) {
   .page-shell {
     width: min(1280px, calc(100% - 32px));

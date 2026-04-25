@@ -1,3 +1,4 @@
+import logo from '../../assets/icons/logo.png'
 import './Footer.css'
 
 const navigationLinks = [
@@ -13,13 +14,81 @@ const legalLinks = [
   { label: 'Disclosures', href: '#/disclosures' },
 ]
 
+const contactDetails = [
+  {
+    label: 'malviyaashutosh100@gmail.com',
+    href: 'mailto:malviyaashutosh100@gmail.com',
+    icon: 'mail',
+  },
+  {
+    label: '+91-8800442431',
+    href: 'tel:+918800442431',
+    icon: 'phone',
+  },
+  {
+    label: 'Noida',
+    href: '#/contact',
+    icon: 'location',
+  },
+  {
+    label: 'Amalviya@pvwa.in',
+    href: 'mailto:Amalviya@pvwa.in',
+    icon: 'web',
+  },
+  {
+    label: 'vsharma@pvwa.in',
+    href: 'mailto:vsharma@pvwa.in',
+    icon: 'web',
+  },
+]
+
+function ContactIcon({ type }) {
+  if (type === 'mail') {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M3.5 6.5h17v11h-17z" />
+        <path d="m4.5 7.5 8 6 8-6" />
+      </svg>
+    )
+  }
+
+  if (type === 'phone') {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M7 5h3l1.2 4-1.8 1.8a15 15 0 0 0 3.8 3.8L15 12l4 1.2v3c0 .6-.4 1-1 1A14 14 0 0 1 5 6c0-.6.4-1 1-1Z" />
+        <path d="M14.5 6.5a4 4 0 0 1 3 3" />
+        <path d="M14.5 3.5a7 7 0 0 1 6 6" />
+      </svg>
+    )
+  }
+
+  if (type === 'location') {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 20s-5.5-5.6-5.5-10A5.5 5.5 0 1 1 17.5 10c0 4.4-5.5 10-5.5 10Z" />
+        <circle cx="12" cy="10" r="2" />
+      </svg>
+    )
+  }
+
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <circle cx="12" cy="12" r="8.5" />
+      <path d="M3.5 12h17" />
+      <path d="M12 3.5c2.4 2.3 3.7 5.2 3.7 8.5S14.4 18.2 12 20.5c-2.4-2.3-3.7-5.2-3.7-8.5S9.6 5.8 12 3.5Z" />
+    </svg>
+  )
+}
+
 function Footer() {
   return (
     <footer className="footer">
       <div className="page-shell footer__inner">
         <div className="footer__top">
           <div className="footer__brand-block">
-            <h2 className="footer__brand">PrimeVista Wealth Advisors</h2>
+            <a className="footer__brand-logo-link" href="#/home" aria-label="PrimeVista home">
+              <img className="footer__brand-logo" src={logo} alt="PrimeVista" />
+            </a>
             <p className="footer__description">
               Elevating investment standards through integrity, research, and
               client-centricity. Your trusted partner in digital wealth management.
@@ -70,12 +139,28 @@ function Footer() {
                 ))}
               </ul>
             </div>
+
+            <div>
+              <h3 className="footer__heading">Contact Details</h3>
+              <ul className="footer__contact-list">
+                {contactDetails.map((item) => (
+                  <li key={item.label}>
+                    <a className="footer__contact-item" href={item.href}>
+                      <span className="footer__contact-icon">
+                        <ContactIcon type={item.icon} />
+                      </span>
+                      <span>{item.label}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
 
         <div className="footer__bottom">
           <p className="footer__copyright">
-            © 2024 PrimeVista Wealth Advisors. All rights reserved. SEBI Registered
+            © 2026 PrimeVista Wealth Advisors. All rights reserved. SEBI Registered
             Investment Advisor.
           </p>
           <a className="footer__support" href="#/contact">

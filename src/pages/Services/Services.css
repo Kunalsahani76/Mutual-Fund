@@ -104,17 +104,13 @@
   width: 26px;
   height: 26px;
   margin-top: 14px;
-  color: #63aadb;
 }
 
-.service-card__icon svg {
+.service-card__icon img {
+  display: block;
   width: 26px;
   height: 26px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.8;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  object-fit: contain;
 }
 
 .service-card__title {
@@ -704,6 +700,16 @@
   }
 }
 
+@media (max-width: 760px) {
+  .services-intelligence__row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .services-intelligence__row .services-intelligence__cell:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
 @media (max-width: 640px) {
   .services-hero {
     min-height: auto;
@@ -899,5 +905,17 @@
 
   .services-calculator__bars {
     min-height: 136px;
+  }
+}
+
+@media (max-width: 380px) {
+  .services-calculator__tab {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .services-calculator__projection {
+    padding-right: 14px;
+    padding-left: 14px;
   }
 }

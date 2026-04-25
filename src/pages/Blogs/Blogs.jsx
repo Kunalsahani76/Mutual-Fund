@@ -6,6 +6,7 @@ import blogCardFive from '../../assets/images/B5.png'
 import blogCardSix from '../../assets/images/B6.png'
 import blogsHero from '../../assets/images/blogshero.png'
 import graphImage from '../../assets/images/graph.png'
+import officeImage from '../../assets/images/office.png'
 import './Blogs.css'
 
 const blogPosts = [
@@ -54,6 +55,17 @@ const blogPosts = [
   },
 ]
 
+const popularTopics = [
+  'Mutual Fund Investment',
+  'Retirement Planning',
+  'Wealth Creation',
+  'Tax Saving Hacks',
+  'Stock Market Analysis',
+  'Crypto Asset Regulation',
+  'Global Real Estate',
+  'Fixed Income Assets',
+]
+
 function Blogs() {
   return (
     <>
@@ -78,6 +90,27 @@ function Blogs() {
         </div>
       </section>
 
+      <section className="blogs-feature-section" aria-labelledby="blogs-feature-title">
+        <div className="page-shell">
+          <article className="blogs-feature">
+            <div className="blogs-feature__media">
+              <img src={officeImage} alt="Modern office overlooking a city skyline" />
+            </div>
+            <div className="blogs-feature__content">
+              <p className="blogs-feature__eyebrow">Featured Strategy</p>
+              <h2 id="blogs-feature-title" className="blogs-feature__title">
+                The Ultimate Guide to Smart Investing in 2026
+              </h2>
+              <p className="blogs-feature__copy">
+                Discover the key shifts in global markets and how to position
+                your portfolio for sustainable growth amidst changing economic
+                indicators.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
       <section className="blogs-grid-section">
         <div className="page-shell">
           <div className="blogs-grid">
@@ -92,6 +125,21 @@ function Blogs() {
                   <p className="blog-card__text">{post.description}</p>
                 </div>
               </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="blogs-topics-section" aria-labelledby="blogs-topics-title">
+        <div className="page-shell">
+          <h2 id="blogs-topics-title" className="blogs-topics__title">
+            Popular Topics
+          </h2>
+          <div className="blogs-topics__list" aria-label="Popular blog topics">
+            {popularTopics.map((topic) => (
+              <span className="blogs-topics__pill" key={topic}>
+                {topic}
+              </span>
             ))}
           </div>
         </div>

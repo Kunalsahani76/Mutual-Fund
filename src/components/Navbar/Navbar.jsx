@@ -1,4 +1,5 @@
 import Button from '../Button/Button'
+import logo from '../../assets/icons/logo.png'
 import './Navbar.css'
 
 const navItems = [
@@ -14,7 +15,7 @@ function Navbar({ currentRoute }) {
       <div className="page-shell">
         <nav className="navbar" aria-label="Primary">
           <a className="navbar__brand" href="#/home">
-            PrimeVista Wealth Advisor
+            <img className="navbar__logo" src={logo} alt="PrimeVista Wealth Advisor" />
           </a>
 
           <ul className="navbar__menu">
@@ -34,7 +35,9 @@ function Navbar({ currentRoute }) {
             })}
           </ul>
 
-          <Button href="#/contact">CONTACT US ↗</Button>
+          <div className="navbar__cta">
+            <Button href="#/contact">CONTACT US ↗</Button>
+          </div>
         </nav>
       </div>
     </header>
