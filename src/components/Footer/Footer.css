@@ -62,7 +62,7 @@
 
 .footer__links-group {
   display: grid;
-  grid-template-columns: minmax(120px, 0.75fr) minmax(130px, 0.8fr) minmax(260px, 1.55fr);
+  grid-template-columns: minmax(120px, 0.75fr) minmax(260px, 1.55fr);
   gap: 44px;
 }
 
@@ -166,7 +166,7 @@
   }
 
   .footer__links-group {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
     gap: 34px;
   }
 

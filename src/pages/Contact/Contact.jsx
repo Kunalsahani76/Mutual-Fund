@@ -32,16 +32,6 @@ const contactDetails = [
       </svg>
     ),
   },
-  {
-    title: 'Working Hours',
-    value: 'Mon - Fri: 9:00 AM - 6:00 PM IST',
-    icon: (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <circle cx="12" cy="12" r="8" />
-        <path d="M12 8v4.5l3 1.5" />
-      </svg>
-    ),
-  },
 ]
 
 const expertiseTags = [
@@ -52,6 +42,38 @@ const expertiseTags = [
 ]
 
 function Contact() {
+  const handleMessageSubmit = (event) => {
+    event.preventDefault()
+
+    const formData = new FormData(event.currentTarget)
+    const fullName = formData.get('fullName')?.trim()
+    const email = formData.get('email')?.trim()
+    const phone = formData.get('phone')?.trim()
+    const message = formData.get('message')?.trim()
+
+    const whatsappMessage = [
+      'New Contact Form Inquiry',
+      '',
+      `Full Name: ${fullName}`,
+      `Email Address: ${email}`,
+      `Phone Number: ${phone}`,
+      `Message: ${message}`,
+    ].join('\n')
+
+    window.open(
+      `https://wa.me/918800442431?text=${encodeURIComponent(whatsappMessage)}`,
+      '_blank',
+      'noopener,noreferrer',
+    )
+  }
+
+  const handleContactCtaClick = (event) => {
+    event.preventDefault()
+    document
+      .getElementById('send-message')
+      ?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+
   return (
     <>
       <section className="contact-hero">
@@ -73,33 +95,50 @@ function Contact() {
         </div>
       </section>
 
-      <section className="contact-connect">
+      <section id="send-message" className="contact-connect">
         <div className="page-shell contact-connect__grid">
           <div className="contact-connect__form-card">
             <h2 className="contact-connect__title">Send a Message</h2>
 
-            <form className="contact-form">
+            <form className="contact-form" onSubmit={handleMessageSubmit}>
               <div className="contact-form__row">
                 <label className="contact-form__field">
                   <span>Full Name</span>
-                  <input type="text" placeholder="John Doe" />
+                  <input
+                    type="text"
+                    name="fullName"
+                    placeholder="John Doe"
+                    required
+                  />
                 </label>
                 <label className="contact-form__field">
                   <span>Email Address</span>
-                  <input type="email" placeholder="john@example.com" />
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="john@example.com"
+                    required
+                  />
                 </label>
               </div>
 
               <label className="contact-form__field">
                 <span>Phone Number</span>
-                <input type="tel" placeholder="+91 98765 43210" />
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="+91 98765 43210"
+                  required
+                />
               </label>
 
               <label className="contact-form__field">
                 <span>Message</span>
                 <textarea
+                  name="message"
                   rows="6"
                   placeholder="Tell us about your investment goals..."
+                  required
                 />
               </label>
 
@@ -164,7 +203,11 @@ function Contact() {
               Partner with advisors who understand your vision. Let&apos;s
               create a financial future that reflects your legacy.
             </p>
-            <a className="contact-cta__button" href="#/contact">
+            <a
+              className="contact-cta__button"
+              href="#/contact"
+              onClick={handleContactCtaClick}
+            >
               Contact Us
             </a>
           </div>

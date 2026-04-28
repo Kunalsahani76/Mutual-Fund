@@ -54,7 +54,7 @@ function Home() {
             </h1>
 
             <p className="home__description">
-              With Trinity Finvest, you have a trusted partner dedicated to help you
+              With PrimeVista Wealth Advisor, you have a trusted partner dedicated to help you
               achieve your financial goals.
             </p>
 
@@ -99,8 +99,8 @@ function Home() {
                 PrimeVista?
               </h2>
               <p className="partner-section__copy">
-                We don't just manage money; we manage futures. Our commitment is built
-                on four pillars of institutional trust.
+                We help you plan with clarity, consistency, and a long-term
+                approach to your financial goals.
               </p>
             </div>
 
@@ -110,9 +110,9 @@ function Home() {
                   <img src={trustedAdvisorsIcon} alt="" aria-hidden="true" />
                 </div>
                 <div>
-                  <h3 className="partner-point__title">Trusted Advisors</h3>
+                  <h3 className="partner-point__title">ARN-352810</h3>
                   <p className="partner-point__text">
-                    SEBI registered transparency in every transaction.
+                    AMFI registered Mutual Fund Distributor.
                   </p>
                 </div>
               </div>
@@ -146,10 +146,9 @@ function Home() {
               </article>
 
               <article className="partner-card partner-card--filled">
-                <h3 className="partner-card__title">Secure Investments</h3>
+                <h3 className="partner-card__title">Investment Guidance</h3>
                 <p className="partner-card__text">
-                  Bank-grade security protocols for your assets and confidential
-                  financial information.
+                  Goal-focused planning with clear communication at every step.
                 </p>
               </article>
             </div>
@@ -163,10 +162,10 @@ function Home() {
                 />
               </div>
               <div className="partner-highlight__copy">
-                <h3 className="partner-highlight__title">Private Wealth Management</h3>
+                <h3 className="partner-highlight__title">Wealth Planning</h3>
                 <p className="partner-highlight__text">
-                  Access exclusive investment avenues and alternative assets usually
-                  reserved for institutional players.
+                  Mutual fund guidance aligned with your risk profile and
+                  investment horizon.
                 </p>
               </div>
             </article>
@@ -179,7 +178,7 @@ function Home() {
           <div className="invest-cta__panel">
             <h2 className="invest-cta__title">Ready to invest?</h2>
             <p className="invest-cta__copy">
-              Join 10M+ users who trust The Sovereign Investor for their wealth
+               Users who trust The Sovereign Investor for their wealth
               creation journey.
             </p>
             <a className="invest-cta__button" href="#/contact">

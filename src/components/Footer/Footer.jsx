@@ -5,13 +5,8 @@ const navigationLinks = [
   { label: 'Home', href: '#/home' },
   { label: 'About Us', href: '#/about' },
   { label: 'Services', href: '#/services' },
+  { label: 'Blogs', href: '#/blogs' },
   { label: 'Contact', href: '#/contact' },
-]
-
-const legalLinks = [
-  { label: 'Privacy Policy', href: '#/privacy-policy' },
-  { label: 'Terms of Service', href: '#/terms-of-service' },
-  { label: 'Disclosures', href: '#/disclosures' },
 ]
 
 const contactDetails = [
@@ -81,6 +76,18 @@ function ContactIcon({ type }) {
 }
 
 function Footer() {
+  const handleFooterNavigationClick = (event, href) => {
+    event.preventDefault()
+
+    if (window.location.hash !== href) {
+      window.location.hash = href
+    }
+
+    window.setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }, 0)
+  }
+
   return (
     <footer className="footer">
       <div className="page-shell footer__inner">
@@ -95,7 +102,7 @@ function Footer() {
             </p>
 
             <div className="footer__socials" aria-label="Contact options">
-              <a className="footer__icon-link" href="mailto:hello@primevista.com" aria-label="Email">
+              <a className="footer__icon-link" href="mailto:malviyaashutosh100@gmail.com" aria-label="Email">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M4 6.5h16v11H4z" />
                   <path d="m5 7.5 7 6 7-6" />
@@ -123,18 +130,14 @@ function Footer() {
               <ul className="footer__links">
                 {navigationLinks.map((link) => (
                   <li key={link.label}>
-                    <a href={link.href}>{link.label}</a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="footer__heading">Legal</h3>
-              <ul className="footer__links">
-                {legalLinks.map((link) => (
-                  <li key={link.label}>
-                    <a href={link.href}>{link.label}</a>
+                    <a
+                      href={link.href}
+                      onClick={(event) =>
+                        handleFooterNavigationClick(event, link.href)
+                      }
+                    >
+                      {link.label}
+                    </a>
                   </li>
                 ))}
               </ul>
@@ -160,12 +163,8 @@ function Footer() {
 
         <div className="footer__bottom">
           <p className="footer__copyright">
-            © 2026 PrimeVista Wealth Advisors. All rights reserved. SEBI Registered
-            Investment Advisor.
+            © 2026 PrimeVista Wealth Advisors. All rights reserved. 
           </p>
-          <a className="footer__support" href="#/contact">
-            Contact Support
-          </a>
         </div>
       </div>
     </footer>
