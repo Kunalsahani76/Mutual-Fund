@@ -254,6 +254,7 @@
 
 .contact-map {
   padding: 0 0 96px;
+  scroll-margin-top: 96px;
 }
 
 .contact-map__frame {
@@ -263,11 +264,11 @@
   box-shadow: 0 22px 56px rgba(20, 41, 67, 0.1);
 }
 
-.contact-map__image {
+.contact-map__embed {
   display: block;
   width: 100%;
   height: clamp(300px, 40vw, 360px);
-  object-fit: cover;
+  border: 0;
 }
 
 .contact-cta {
@@ -407,7 +408,7 @@
     border-radius: 20px;
   }
 
-  .contact-map__image {
+  .contact-map__embed {
     height: 240px;
   }
 

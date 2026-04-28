@@ -237,6 +237,26 @@
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.94);
   box-shadow: 0 12px 24px rgba(52, 94, 136, 0.05);
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    transform 160ms ease;
+}
+
+.planning-card:hover,
+.planning-card:focus-visible {
+  border-color: #4f9dea;
+  box-shadow: 0 16px 30px rgba(52, 94, 136, 0.12);
+  transform: translateY(-2px);
+}
+
+.planning-card:focus-visible {
+  outline: 3px solid rgba(93, 166, 239, 0.24);
+  outline-offset: 3px;
 }
 
 .planning-card__image {
@@ -290,6 +310,7 @@
   background:
     radial-gradient(circle at top left, rgba(122, 184, 242, 0.14), transparent 28%),
     linear-gradient(180deg, #eef3f8 0%, #ffffff 100%);
+  scroll-margin-top: 96px;
 }
 
 .services-calculator__tabs {
@@ -363,10 +384,7 @@
 }
 
 .services-calculator__intro {
-  display: grid;
-  grid-template-columns: minmax(0, 1.4fr) minmax(260px, 0.9fr);
-  gap: 28px;
-  align-items: start;
+  max-width: 720px;
   margin-top: 18px;
 }
 
@@ -385,37 +403,6 @@
   color: #4e5866;
   font-size: 1.08rem;
   line-height: 1.7;
-}
-
-.services-calculator__sources {
-  display: grid;
-  gap: 12px;
-}
-
-.services-calculator__source {
-  display: block;
-  padding: 14px 16px;
-  border: 1px solid rgba(113, 148, 188, 0.18);
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.82);
-  box-shadow: 0 10px 20px rgba(29, 52, 83, 0.05);
-}
-
-.services-calculator__source span {
-  display: block;
-  color: #6a7582;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-.services-calculator__source strong {
-  display: block;
-  margin-top: 6px;
-  color: #273240;
-  font-size: 0.98rem;
-  line-height: 1.5;
 }
 
 .services-calculator__panel {
@@ -691,10 +678,6 @@
     padding: 0 0 72px;
   }
 
-  .services-calculator__intro {
-    grid-template-columns: 1fr;
-  }
-
   .services-calculator__panel {
     grid-template-columns: 1fr;
   }
@@ -857,11 +840,6 @@
   .services-calculator__text {
     font-size: 0.98rem;
     line-height: 1.65;
-  }
-
-  .services-calculator__source {
-    padding: 12px 14px;
-    border-radius: 14px;
   }
 
   .services-calculator__panel {

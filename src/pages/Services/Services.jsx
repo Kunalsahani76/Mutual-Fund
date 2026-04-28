@@ -95,86 +95,46 @@ const planningCards = [
     description: 'Plan for a life of leisure.',
     image: retirementImage,
     icon: 'retirement',
+    scenarioId: 'retirement',
   },
   {
     title: 'Wealth Creation',
     description: 'Compound your capital over time.',
     image: wealthCreationImage,
     icon: 'growth',
+    scenarioId: 'wealth-creation',
   },
   {
     title: 'Kids Marriage',
     description: "Celebrate life's milestones.",
     image: kidsMarriageImage,
     icon: 'heart',
+    scenarioId: 'marriage',
   },
   {
     title: 'Kids Education',
     description: 'Secure their academic future.',
     image: kidsEducationImage,
     icon: 'education',
+    scenarioId: 'education',
   },
   {
     title: 'Vacation',
     description: 'Explore the world debt-free.',
     image: vacationImage,
     icon: 'travel',
+    scenarioId: 'vacation',
   },
   {
     title: 'Wealth Calculator',
     description: 'Simulate your future returns.',
     image: wealthCalculatorImage,
     icon: 'calculator',
+    scenarioId: 'wealth-calculator',
   },
 ]
 
 const calculatorScenarios = [
-  {
-    id: 'education',
-    label: 'Education',
-    icon: 'education',
-    breadcrumb: 'Kids Education Fund Calculator',
-    title: 'Calculate For Kids Education Fund',
-    description:
-      "Make an estimate for your child's higher education with a live fund estimator tuned for long-term mutual fund planning.",
-    labels: {
-      age: 'What is the age of your child?',
-      years: 'How many years can you save for this dream?',
-      cost: 'What is the current estimate of this dream?',
-      returns: 'Assumed annual mutual fund return',
-      inflation: 'Assumed annual inflation',
-    },
-    defaults: {
-      age: 10,
-      years: 10,
-      cost: 1200000,
-      returns: 12,
-      inflation: 6,
-    },
-  },
-  {
-    id: 'marriage',
-    label: 'Marriage',
-    icon: 'heart',
-    breadcrumb: 'Kids Marriage Fund Calculator',
-    title: 'Plan For Kids Marriage Corpus',
-    description:
-      "Project the future wedding budget and estimate the monthly SIP required to work toward it with disciplined investing.",
-    labels: {
-      age: 'What is the age of your child?',
-      years: 'How many years can you save for this dream?',
-      cost: 'What is the current estimate of this dream?',
-      returns: 'Assumed annual mutual fund return',
-      inflation: 'Assumed annual inflation',
-    },
-    defaults: {
-      age: 8,
-      years: 16,
-      cost: 1800000,
-      returns: 11,
-      inflation: 5.5,
-    },
-  },
   {
     id: 'retirement',
     label: 'Retirement',
@@ -199,10 +159,10 @@ const calculatorScenarios = [
     },
   },
   {
-    id: 'wealth',
-    label: 'Wealth',
-    icon: 'calculator',
-    breadcrumb: 'Wealth Growth Calculator',
+    id: 'wealth-creation',
+    label: 'Wealth Creation',
+    icon: 'growth',
+    breadcrumb: 'Wealth Creation Calculator',
     title: 'Project Long-Term Wealth Creation',
     description:
       'Set a present-day wealth goal, adjust the assumptions, and see the corpus projection update instantly for your chosen horizon.',
@@ -221,23 +181,97 @@ const calculatorScenarios = [
       inflation: 4.5,
     },
   },
-]
-
-const marketSources = [
   {
-    title: 'AMFI NAV cycle',
-    value: 'NAVs are published daily after markets close.',
-    href: 'https://www.amfiindia.com/investor/knowledge-center-info?zoneName=NetAssetValueNAV',
+    id: 'marriage',
+    label: 'Kids Marriage',
+    icon: 'heart',
+    breadcrumb: 'Kids Marriage Fund Calculator',
+    title: 'Plan For Kids Marriage Corpus',
+    description:
+      "Project the future wedding budget and estimate the monthly SIP required to work toward it with disciplined investing.",
+    labels: {
+      age: 'What is the age of your child?',
+      years: 'How many years can you save for this dream?',
+      cost: 'What is the current estimate of this dream?',
+      returns: 'Assumed annual mutual fund return',
+      inflation: 'Assumed annual inflation',
+    },
+    defaults: {
+      age: 8,
+      years: 16,
+      cost: 1800000,
+      returns: 11,
+      inflation: 5.5,
+    },
   },
   {
-    title: 'MoSPI CPI, February 2026',
-    value: 'India CPI inflation was 3.21% YoY on 12 March 2026.',
-    href: 'https://www.mospi.gov.in/uploads/latestReleases/latest_release_1773310539387_714ce3b5-4644-4aef-b2e3-64433640a9c3_Press_Release_of_CPI_February_2026.pdf',
+    id: 'education',
+    label: 'Kids Education',
+    icon: 'education',
+    breadcrumb: 'Kids Education Fund Calculator',
+    title: 'Calculate For Kids Education Fund',
+    description:
+      "Make an estimate for your child's higher education with a live fund estimator tuned for long-term mutual fund planning.",
+    labels: {
+      age: 'What is the age of your child?',
+      years: 'How many years can you save for this dream?',
+      cost: 'What is the current estimate of this dream?',
+      returns: 'Assumed annual mutual fund return',
+      inflation: 'Assumed annual inflation',
+    },
+    defaults: {
+      age: 10,
+      years: 10,
+      cost: 1200000,
+      returns: 12,
+      inflation: 6,
+    },
   },
   {
-    title: 'RBI baseline outlook',
-    value: 'RBI projected 4.3% average inflation for 2026-27.',
-    href: 'https://www.rbi.org.in/scripts/BS_ViewBulletin.aspx/scripts/BS_ViewBulletin.aspx?Id=23321',
+    id: 'vacation',
+    label: 'Vacation',
+    icon: 'travel',
+    breadcrumb: 'Vacation Fund Calculator',
+    title: 'Plan Your Vacation Fund',
+    description:
+      'Estimate a future travel budget and the monthly SIP needed to plan for it without disturbing other goals.',
+    labels: {
+      age: 'What is your current age?',
+      years: 'How many years can you save for this vacation?',
+      cost: 'What is the current estimate of this vacation?',
+      returns: 'Assumed annual mutual fund return',
+      inflation: 'Assumed annual inflation',
+    },
+    defaults: {
+      age: 28,
+      years: 3,
+      cost: 500000,
+      returns: 9,
+      inflation: 6,
+    },
+  },
+  {
+    id: 'wealth-calculator',
+    label: 'Wealth Calculator',
+    icon: 'calculator',
+    breadcrumb: 'Wealth Calculator',
+    title: 'Simulate Your Future Returns',
+    description:
+      'Test investment amount, time horizon, returns, and inflation assumptions to estimate a future corpus.',
+    labels: {
+      age: 'What is your current age?',
+      years: 'How many years can you stay invested?',
+      cost: 'What is your target amount in today’s value?',
+      returns: 'Assumed annual mutual fund return',
+      inflation: 'Assumed annual inflation',
+    },
+    defaults: {
+      age: 30,
+      years: 10,
+      cost: 2500000,
+      returns: 10,
+      inflation: 5,
+    },
   },
 ]
 
@@ -388,6 +422,16 @@ function Services() {
     }))
   }
 
+  function openCalculator(scenarioId) {
+    setActiveScenarioId(scenarioId)
+
+    window.setTimeout(() => {
+      document
+        .getElementById('services-calculator')
+        ?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }, 0)
+  }
+
   return (
     <>
       <section
@@ -441,8 +485,8 @@ function Services() {
               Mutual Fund Intelligence
             </h2>
             <p className="services-intelligence__description">
-              We analyze over 2,500 data points to curate a selection of funds that
-              match your specific risk appetite and horizon.
+              Selection of funds that match your specific risk appetite and
+              horizon.
             </p>
           </div>
 
@@ -481,19 +525,28 @@ function Services() {
       <section className="services-planning" aria-label="Financial planning goals">
         <div className="page-shell services-planning__grid">
           {planningCards.map((card) => (
-            <article className="planning-card" key={card.title}>
+            <button
+              className="planning-card"
+              key={card.title}
+              type="button"
+              onClick={() => openCalculator(card.scenarioId)}
+            >
               <img className="planning-card__image" src={card.image} alt={`${card.title} illustration`} />
               <div className="planning-card__icon">
                 <PlanningCardIcon type={card.icon} />
               </div>
               <h2 className="planning-card__title">{card.title}</h2>
               <p className="planning-card__description">{card.description}</p>
-            </article>
+            </button>
           ))}
         </div>
       </section>
 
-      <section className="services-calculator" aria-labelledby="services-calculator-title">
+      <section
+        id="services-calculator"
+        className="services-calculator"
+        aria-labelledby="services-calculator-title"
+      >
         <div className="page-shell">
           <div className="services-calculator__tabs" role="tablist" aria-label="Goal calculators">
             {calculatorScenarios.map((scenario) => (
@@ -526,20 +579,6 @@ function Services() {
                 {activeScenario.title}
               </h2>
               <p className="services-calculator__text">{activeScenario.description}</p>
-            </div>
-            <div className="services-calculator__sources" aria-label="Market source references">
-              {marketSources.map((source) => (
-                <a
-                  key={source.title}
-                  className="services-calculator__source"
-                  href={source.href}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <span>{source.title}</span>
-                  <strong>{source.value}</strong>
-                </a>
-              ))}
             </div>
           </div>
 
@@ -684,8 +723,8 @@ function Services() {
               </div>
 
               <p className="services-calculator__disclaimer">
-                Live estimates are driven by your selected assumptions. Mutual fund NAVs are
-                published daily by AMFI, but returns are not guaranteed and future values can vary.
+                Live estimates are driven by your selected assumptions. Returns are
+                not guaranteed and future values can vary.
               </p>
             </aside>
           </div>

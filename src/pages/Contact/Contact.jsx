@@ -1,6 +1,5 @@
 import './Contact.css'
 import contactHero from '../../assets/images/contacthero.png'
-import mapImage from '../../assets/images/map.jpg'
 
 const contactDetails = [
   {
@@ -35,10 +34,10 @@ const contactDetails = [
 ]
 
 const expertiseTags = [
-  'Wealth Structuring',
-  'Tax Advisory',
-  'Estate Planning',
-  'Portfolio Hedging',
+  'SIP Planning',
+  'Mutual Fund Advisory',
+  'Portfolio Review',
+  'Goal-Based Investing',
 ]
 
 function Contact() {
@@ -179,13 +178,15 @@ function Contact() {
         </div>
       </section>
 
-      <section className="contact-map">
+      <section id="contact-map" className="contact-map">
         <div className="page-shell">
           <div className="contact-map__frame">
-            <img
-              className="contact-map__image"
-              src={mapImage}
-              alt="Map highlighting New Delhi"
+            <iframe
+              className="contact-map__embed"
+              title="Delhi location map"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=77.1174%2C28.5355%2C77.3002%2C28.6841&layer=mapnik&marker=28.6139%2C77.2090"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
             />
           </div>
         </div>

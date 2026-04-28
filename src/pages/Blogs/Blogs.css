@@ -163,13 +163,8 @@
   }
 }
 
-.blogs-grid-section {
-  padding: 68px 0 58px;
-  background: #f7f7f7;
-}
-
 .blogs-topics-section {
-  padding: 0 0 48px;
+  padding: 58px 0 48px;
   background: #f7f7f7;
 }
 
@@ -285,72 +280,6 @@
   box-shadow: 0 10px 24px rgba(34, 76, 122, 0.16);
 }
 
-.blogs-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 44px 22px;
-}
-
-.blog-card {
-  min-width: 0;
-}
-
-.blog-card__media {
-  position: relative;
-  overflow: hidden;
-  border-radius: 22px;
-  background: #dfe7f0;
-  aspect-ratio: 1.4 / 1;
-  box-shadow: 0 10px 28px rgba(18, 33, 58, 0.08);
-}
-
-.blog-card__media img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 260ms ease;
-}
-
-.blog-card:hover .blog-card__media img {
-  transform: scale(1.06);
-}
-
-.blog-card__tag {
-  position: absolute;
-  top: 14px;
-  left: 14px;
-  z-index: 1;
-  padding: 5px 10px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.92);
-  color: #4b5666;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.blog-card__body {
-  padding-top: 16px;
-}
-
-.blog-card__title {
-  margin: 0;
-  color: #222a33;
-  font-size: clamp(1.32rem, 1.9vw, 1.86rem);
-  font-weight: 500;
-  line-height: 1.28;
-  letter-spacing: -0.03em;
-}
-
-.blog-card__text {
-  margin: 10px 0 0;
-  color: #5d6777;
-  font-size: 1rem;
-  line-height: 1.65;
-}
-
 @media (max-width: 900px) {
   .blogs-hero {
     min-height: auto;
@@ -367,11 +296,6 @@
   .blogs-hero__visual {
     justify-content: flex-start;
     padding-right: 0;
-  }
-
-  .blogs-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 36px 20px;
   }
 
   .blogs-feature {
@@ -422,10 +346,6 @@
     transform: rotate(4deg);
   }
 
-  .blogs-grid-section {
-    padding: 54px 0 44px;
-  }
-
   .blogs-feature-section {
     padding-top: 42px;
   }
@@ -462,7 +382,7 @@
   }
 
   .blogs-topics-section {
-    padding-bottom: 38px;
+    padding: 42px 0 38px;
   }
 
   .blogs-topics__list {
@@ -474,19 +394,6 @@
     min-height: 30px;
     padding: 0 12px;
     font-size: 0.76rem;
-  }
-
-  .blogs-grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .blog-card__title {
-    font-size: 1.5rem;
-  }
-
-  .blog-card__text {
-    font-size: 0.98rem;
   }
 
   .blogs-cta-section {

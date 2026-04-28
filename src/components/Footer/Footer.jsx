@@ -76,6 +76,14 @@ function ContactIcon({ type }) {
 }
 
 function Footer() {
+  const scrollToContactMap = () => {
+    const mapSection = document.getElementById('contact-map')
+
+    if (mapSection) {
+      mapSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
+
   const handleFooterNavigationClick = (event, href) => {
     event.preventDefault()
 
@@ -86,6 +94,16 @@ function Footer() {
     window.setTimeout(() => {
       window.scrollTo({ top: 0, behavior: 'smooth' })
     }, 0)
+  }
+
+  const handleMapLinkClick = (event) => {
+    event.preventDefault()
+
+    if (window.location.hash !== '#/contact') {
+      window.location.hash = '#/contact'
+    }
+
+    window.setTimeout(scrollToContactMap, 80)
   }
 
   return (
@@ -115,7 +133,12 @@ function Footer() {
                   <path d="M14.5 3.5a7 7 0 0 1 6 6" />
                 </svg>
               </a>
-              <a className="footer__icon-link" href="#/contact" aria-label="Location">
+              <a
+                className="footer__icon-link"
+                href="#/contact"
+                aria-label="Location"
+                onClick={handleMapLinkClick}
+              >
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M12 20s-5.5-5.6-5.5-10A5.5 5.5 0 1 1 17.5 10c0 4.4-5.5 10-5.5 10Z" />
                   <circle cx="12" cy="10" r="2" />
@@ -148,7 +171,13 @@ function Footer() {
               <ul className="footer__contact-list">
                 {contactDetails.map((item) => (
                   <li key={item.label}>
-                    <a className="footer__contact-item" href={item.href}>
+                    <a
+                      className="footer__contact-item"
+                      href={item.href}
+                      onClick={
+                        item.icon === 'location' ? handleMapLinkClick : undefined
+                      }
+                    >
                       <span className="footer__contact-icon">
                         <ContactIcon type={item.icon} />
                       </span>
