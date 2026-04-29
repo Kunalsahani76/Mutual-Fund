@@ -192,7 +192,7 @@ function Footer() {
 
         <div className="footer__bottom">
           <p className="footer__copyright">
-            © 2026 PrimeVista Wealth Advisors. All rights reserved. 
+            © 2026 Trinity Finvest. All rights reserved. 
           </p>
         </div>
       </div>

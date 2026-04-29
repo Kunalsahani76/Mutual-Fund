@@ -177,10 +177,6 @@ function Home() {
         <div className="page-shell">
           <div className="invest-cta__panel">
             <h2 className="invest-cta__title">Ready to invest?</h2>
-            <p className="invest-cta__copy">
-               Users who trust The Sovereign Investor for their wealth
-              creation journey.
-            </p>
             <a className="invest-cta__button" href="#/contact">
               Talk To Advisor
             </a>
