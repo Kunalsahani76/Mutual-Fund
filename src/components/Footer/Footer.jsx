@@ -28,12 +28,12 @@ const contactDetails = [
   {
     label: 'Amalviya@pvwa.in',
     href: 'mailto:Amalviya@pvwa.in',
-    icon: 'web',
+    icon: 'mail',
   },
   {
     label: 'vsharma@pvwa.in',
     href: 'mailto:vsharma@pvwa.in',
-    icon: 'web',
+    icon: 'mail',
   },
 ]
 
