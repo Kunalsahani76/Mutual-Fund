@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Button from '../Button/Button'
 import logo from '../../assets/icons/logo.png'
 import './Navbar.css'
@@ -10,6 +11,12 @@ const navItems = [
 ]
 
 function Navbar({ currentRoute }) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const closeMenu = () => {
+    setIsMenuOpen(false)
+  }
+
   return (
     <header className="navbar-wrap">
       <div className="page-shell">
@@ -18,25 +25,48 @@ function Navbar({ currentRoute }) {
             <img className="navbar__logo" src={logo} alt="PrimeVista Wealth Advisor" />
           </a>
 
-          <ul className="navbar__menu">
-            {navItems.map((item) => {
-              const isActive = currentRoute === item.href
+          <button
+            className={`navbar__toggle${isMenuOpen ? ' navbar__toggle--open' : ''}`}
+            type="button"
+            aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-expanded={isMenuOpen}
+            aria-controls="primary-navigation"
+            onClick={() => setIsMenuOpen((isOpen) => !isOpen)}
+          >
+            <span />
+            <span />
+            <span />
+          </button>
 
-              return (
-                <li key={item.href}>
-                  <a
-                    className={`navbar__link${isActive ? ' navbar__link--active' : ''}`}
-                    href={item.href}
-                  >
-                    {item.label}
-                  </a>
-                </li>
-              )
-            })}
-          </ul>
+          <div
+            className={`navbar__panel${isMenuOpen ? ' navbar__panel--open' : ''}`}
+            id="primary-navigation"
+            onClickCapture={(event) => {
+              if (event.target.closest('a')) {
+                closeMenu()
+              }
+            }}
+          >
+            <ul className="navbar__menu">
+              {navItems.map((item) => {
+                const isActive = currentRoute === item.href
 
-          <div className="navbar__cta">
-            <Button href="#/contact">CONTACT US ↗</Button>
+                return (
+                  <li key={item.href}>
+                    <a
+                      className={`navbar__link${isActive ? ' navbar__link--active' : ''}`}
+                      href={item.href}
+                    >
+                      {item.label}
+                    </a>
+                  </li>
+                )
+              })}
+            </ul>
+
+            <div className="navbar__cta">
+              <Button href="#/contact">CONTACT US ↗</Button>
+            </div>
           </div>
         </nav>
       </div>

@@ -438,6 +438,10 @@
 }
 
 @media (max-width: 640px) {
+  .about-hero__media {
+    background-position: 82% center;
+  }
+
   .about-hero__shell {
     min-height: auto;
     padding-top: 56px;

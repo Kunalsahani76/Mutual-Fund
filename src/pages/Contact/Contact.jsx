@@ -33,13 +33,6 @@ const contactDetails = [
   },
 ]
 
-const expertiseTags = [
-  'SIP Planning',
-  'Mutual Fund Advisory',
-  'Portfolio Review',
-  'Goal-Based Investing',
-]
-
 function Contact() {
   const handleMessageSubmit = (event) => {
     event.preventDefault()
@@ -160,17 +153,6 @@ function Contact() {
                       <p className="contact-info__value">{item.value}</p>
                     </div>
                   </article>
-                ))}
-              </div>
-            </aside>
-
-            <aside className="contact-expertise">
-              <p className="contact-expertise__eyebrow">Our Expertise</p>
-              <div className="contact-expertise__tags">
-                {expertiseTags.map((tag) => (
-                  <span key={tag} className="contact-expertise__tag">
-                    {tag}
-                  </span>
                 ))}
               </div>
             </aside>

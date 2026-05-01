@@ -71,8 +71,7 @@
   align-items: start;
 }
 
-.contact-connect__form-card,
-.contact-expertise {
+.contact-connect__form-card {
   background: #ffffff;
   border: 1px solid #e6edf4;
   border-radius: 18px;
@@ -219,37 +218,6 @@
   color: #ffffff;
   font-size: 1.1rem;
   line-height: 1.45;
-}
-
-.contact-expertise {
-  padding: 24px 22px;
-}
-
-.contact-expertise__eyebrow {
-  margin: 0 0 16px;
-  color: #5c9be0;
-  font-size: 0.85rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.contact-expertise__tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.contact-expertise__tag {
-  display: inline-flex;
-  align-items: center;
-  min-height: 34px;
-  padding: 0 14px;
-  border-radius: 999px;
-  background: #dbe7ff;
-  color: #53647d;
-  font-size: 0.84rem;
-  font-weight: 500;
 }
 
 .contact-map {
@@ -436,7 +404,6 @@
 @media (max-width: 380px) {
   .contact-connect__form-card,
   .contact-info,
-  .contact-expertise,
   .contact-cta__panel {
     padding-right: 16px;
     padding-left: 16px;
