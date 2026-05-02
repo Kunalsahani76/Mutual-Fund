@@ -51,7 +51,7 @@ function About() {
           <div className="about-hero__content">
             <p className="about-hero__eyebrow"></p>
             <h1 className="about-hero__title">
-              About PrimeVista
+              About Trinity Finvest
               <br />
               Wealth Advisors
             </h1>
@@ -72,7 +72,7 @@ function About() {
         <div className="page-shell about-intro__inner">
           <h2 className="about-intro__title">Decades of Sophisticated Expertise</h2>
           <p className="about-intro__copy">
-            Founded on the principles of transparency and intellectual rigor, PrimeVista
+            Founded on the principles of transparency and intellectual rigor, Trinity Finvest
             Wealth Advisors has evolved into a cornerstone of financial stability. Our
             multidisciplinary team specializes in complex financial planning, curated
             mutual fund selections, and bespoke wealth management solutions. We don't
@@ -122,7 +122,7 @@ function About() {
 
       <section className="about-advantage">
         <div className="page-shell">
-          <h2 className="about-advantage__title">The PrimeVista Advantage</h2>
+          <h2 className="about-advantage__title">The Trinity Finvest Advantage</h2>
 
           <div className="about-advantage__grid">
             {advantageItems.map((item) => (

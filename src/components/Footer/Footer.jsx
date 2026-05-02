@@ -111,8 +111,8 @@ function Footer() {
       <div className="page-shell footer__inner">
         <div className="footer__top">
           <div className="footer__brand-block">
-            <a className="footer__brand-logo-link" href="#/home" aria-label="PrimeVista home">
-              <img className="footer__brand-logo" src={logo} alt="PrimeVista" />
+            <a className="footer__brand-logo-link" href="#/home" aria-label="Trinity Finvest home">
+              <img className="footer__brand-logo" src={logo} alt="Trinity Finvest" />
             </a>
             <p className="footer__description">
               Elevating investment standards through integrity, research, and

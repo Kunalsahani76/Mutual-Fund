@@ -54,7 +54,7 @@ function Home() {
             </h1>
 
             <p className="home__description">
-              With PrimeVista Wealth Advisor, you have a trusted partner dedicated to help you
+              With Trinity Finvest, you have a trusted partner dedicated to help you
               achieve your financial goals.
             </p>
 
@@ -96,7 +96,7 @@ function Home() {
               <h2 className="partner-section__title">
                 Why Partner With
                 <br />
-                PrimeVista?
+                Trinity Finvest?
               </h2>
               <p className="partner-section__copy">
                 We help you plan with clarity, consistency, and a long-term

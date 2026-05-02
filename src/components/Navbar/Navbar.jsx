@@ -22,7 +22,7 @@ function Navbar({ currentRoute }) {
       <div className="page-shell">
         <nav className="navbar" aria-label="Primary">
           <a className="navbar__brand" href="#/home">
-            <img className="navbar__logo" src={logo} alt="PrimeVista Wealth Advisor" />
+            <img className="navbar__logo" src={logo} alt="Trinity Finvest" />
           </a>
 
           <button
