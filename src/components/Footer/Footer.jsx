@@ -111,8 +111,8 @@ function Footer() {
       <div className="page-shell footer__inner">
         <div className="footer__top">
           <div className="footer__brand-block">
-            <a className="footer__brand-logo-link" href="#/home" aria-label="Trinity Finvest home">
-              <img className="footer__brand-logo" src={logo} alt="Trinity Finvest" />
+            <a className="footer__brand-logo-link" href="#/home" aria-label="PrimeVista Wealth Advisor home">
+              <img className="footer__brand-logo" src={logo} alt="PrimeVista Wealth Advisor" />
             </a>
             <p className="footer__description">
               Elevating investment standards through integrity, research, and
@@ -192,7 +192,7 @@ function Footer() {
 
         <div className="footer__bottom">
           <p className="footer__copyright">
-            © 2026 Trinity Finvest. All rights reserved. 
+            © 2026 PrimeVista Wealth Advisor. All rights reserved. 
           </p>
         </div>
       </div>
